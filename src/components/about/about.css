@@ -1,6 +1,7 @@
 .about__container {
     display: grid;
-    grid-template-columns: 35% 50%;
+    /* grid-template-columns: 35% 50%; */
+    grid-template-columns: 1fr;
     gap: 15%;
 }
 
