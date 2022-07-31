@@ -1,6 +1,6 @@
 .container.testimonials__container {
-    width: 50%;
-    padding: 4rem;
+    width: 80%;
+    padding: 0rem;
 }
 
 .client__avatar {
@@ -35,7 +35,7 @@
 /* ====================== MEDIA QUERIES (MEDIUM DEVICES) ================== */
 @media screen and (max-width: 1024px) {
    .container.testimonials__container {
-        width: 60%;
+        width: 90%;
    }
 }
 
