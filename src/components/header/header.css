@@ -1,6 +1,7 @@
 header {
-    height: 92vh !important;
-    padding-top: 7rem;overflow: hidden;
+    /* height: 92vh !important; 
+    overflow: hidden;*/
+    margin-top: 7rem;
 }
 
 .header__container {
@@ -36,11 +37,15 @@ header {
 }
 
 /* ====================== ME ================== */
+.conatiner__me{
+    display: flex;
+    justify-content: center;
+}
 .me {
     background:linear-gradient(to bottom, #F8FCF5,#F8FBEF ,#DAE3D9) ;
     width: 22rem;
     height: 17rem;
-    position: absolute;
+    /* position: absolute; */
     left: calc(50% - 11rem);
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
@@ -60,16 +65,16 @@ header {
 
 /* ====================== MEDIA QUERIES (MEDIUM DEVICES) ================== */
 @media screen and (max-width: 1024px) {
-    header {
+    /* header {
         height: 92vh !important;
-    }
+    } */
 }
 
 /* ====================== MEDIA QUERIES (SMALL DEVICES) ================== */
 @media screen and (max-width: 600px) {
-    header {
+    /* header {
         height: 100vh !important;
-    }
+    } */
 
     .header__socials,
     .scroll__down {
