@@ -1,15 +1,10 @@
 import React from 'react';
 
 import RAM from '../../assets/ram.jpg';
-
 import ME from '../../assets/me-about.jpg';
-
 import { FaAward } from 'react-icons/fa';
-
 import { FiUsers } from 'react-icons/fi';
-
 import { VscFolderLibrary } from 'react-icons/vsc';
-
 import './about.css';
 
 const About = () => {
