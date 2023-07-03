@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
-import { collection, doc, getDocs } from "firebase/firestore"; 
+import { collection, doc, getDocs } from "firebase/firestore";
 import { db } from '../../firebase'
 import './portfolio.css';
 
 const Portfolio = () => {
-  const [ portfolio, setPortfolio ] = useState([]);
+  const [portfolio, setPortfolio] = useState([]);
 
   useEffect(() => {
     const getPortfolio = async () => {
@@ -14,8 +15,6 @@ const Portfolio = () => {
     }
     getPortfolio();
   }, [])
-  
-  
 
   return (
     <section id="portfolio">
@@ -24,21 +23,30 @@ const Portfolio = () => {
 
       <div className="container portfolio__container">
         {
-          portfolio.map(({ id, image, title, github, demo }) => {
+          portfolio.map(({ id, image, title, github, demo }, i) => {
             return (
-              <article key={id} className="portfolio__item">
-                <div className="portfolio__item-image">
-                  <img src={image} alt="" />
-                  <h3>{title}</h3>
-                  <div className="portfolio__item-cta">
-                    <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
-                    <a href={demo} className="btn btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
+              <>
+                {(title === "Amazon-clone" || title === "Airbnb-clone" || title === "Disney") && (<article key={i} className="portfolio__item">
+                  <div className="portfolio__item-image">
+                    <img src={image} alt="" />
+                    <h3>{title}</h3>
+                    <div className="portfolio__item-cta">
+                      <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
+                      <a href={demo} className="btn btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>)}
+              </>
             )
           })
         }
+        <div></div>
+        <div className="portfolio__button__container">
+
+          {/* <Link to="/portfolioPage" className="btn btn-primary">View more</Link> */}
+
+          <a href="/PortfolioView" className="btn btn-primary">View More</a>
+        </div>
       </div>
     </section>
   )

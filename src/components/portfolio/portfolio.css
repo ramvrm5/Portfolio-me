@@ -32,6 +32,12 @@
     margin-bottom: 1rem;
 }
 
+.portfolio__button__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* ====================== MEDIA QUERIES (MEDIUM DEVICES) ================== */
 @media screen and (max-width: 1024px) {
