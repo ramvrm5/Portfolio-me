@@ -54,3 +54,32 @@
         gap: 1rem;
     }
 }
+
+/* PORTFOLIO-PAGE */
+.portfolio__page > a.portfolio__page_back{
+    margin: 25px 0 0 25px;
+}
+
+/* .portfolio__page_main {
+    position: relative;
+    width: 100%;
+    margin: 0rem auto;
+}*/
+
+.portfolio__page_social {
+    top: 15rem;
+    left: 13rem;
+    position: absolute;
+    width: 15%;
+}
+
+.portfolio__page_list {
+    width: 75%;
+} 
+.portfolio__page_main {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem auto;
+}

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { collection, doc, getDocs } from "firebase/firestore";
 import { db } from '../../firebase'
 import './portfolio.css';
 
 const Portfolio = () => {
+  const navigate = useNavigate();
   const [portfolio, setPortfolio] = useState([]);
 
   useEffect(() => {
@@ -15,6 +16,10 @@ const Portfolio = () => {
     }
     getPortfolio();
   }, [])
+
+  const handlePortfolioPage = () => {
+    navigate('/Portfolio', { state: { data: portfolio } });
+  }
 
   return (
     <section id="portfolio">
@@ -40,12 +45,13 @@ const Portfolio = () => {
             )
           })
         }
+
         <div></div>
         <div className="portfolio__button__container">
 
           {/* <Link to="/portfolioPage" className="btn btn-primary">View more</Link> */}
 
-          <a href="/PortfolioView" className="btn btn-primary">View More</a>
+          <a onClick={() => handlePortfolioPage()} className="btn btn-primary">View More</a>
         </div>
       </div>
     </section>
