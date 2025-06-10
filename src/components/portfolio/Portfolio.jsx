@@ -31,7 +31,7 @@ const Portfolio = () => {
           return (
             <>
               {(title === "Amazon-clone" ||
-                title === "Airbnb-clone" ||
+                title === "Task-management" ||
                 title === "Note-taking-app") && (
                 <article key={i} className="portfolio__item">
                   <div className="portfolio__item-image">
